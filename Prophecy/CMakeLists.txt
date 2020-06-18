@@ -42,5 +42,12 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 add_subdirectory(Prophecy/vendor/glfw)
 add_subdirectory(Prophecy/vendor/spdlog)
 
+
+
 include_directories(${OPENGL_INCLUDE_DIR}  ${GLUT_INCLUDE_DIRS} ${GLFW3_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/vendor/spdlog/include ${CMAKE_SOURCE_DIR}/vendor/glfw/include src/Prophecy)
+
+if (WIN32 OR WIN64)
 target_link_libraries(${PROJECT_NAME} glfw ${GLFW_LIBRARIES} glu32 opengl32 spdlog::spdlog_header_only )
+else()
+target_link_libraries(${PROJECT_NAME} glfw ${GLFW_LIBRARIES} ${EXTRA_PROPHECY_LIBS} spdlog::spdlog_header_only )
+endif()
