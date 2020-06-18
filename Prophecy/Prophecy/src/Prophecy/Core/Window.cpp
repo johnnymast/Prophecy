@@ -12,8 +12,9 @@ namespace Prophecy {
 
 #if defined(_WINDOWS) || defined(_WIN32) || defined(_WIN64)
         return CreateScope<WindowsWindow>(props);
-#else if defined(__WIN32__)
-        HZ_CORE_ASSERT(false, "Unknown platform!");
+#else
+//#error "Platfom is not supported"
+//        HZ_CORE_ASSERT(false, "Unknown platform!");
         return nullptr;
 #endif
 
