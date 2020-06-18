@@ -1,5 +1,4 @@
-//#include "compiled.h"
-
+#include <compiled.h>
 
 #include "Prophecy/Core/Application.h"
 #include "Base.h"
