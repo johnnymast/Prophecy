@@ -8,7 +8,11 @@ vendor/bin/
 bin-int/
 bin/
 
+# Vendor coude
 
+Prophecy/vendor/
+
+# clion files
 .idea/Sandbox
 
 # Log files
