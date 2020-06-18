@@ -45,13 +45,12 @@ project "Prophecy"
 
 		defines
 		{
-			"PR_PLATFORM_WINDOWS",
-			"PR_BUILD_DLL"
+
 		}
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Client")
 		}
 
 	filter "configurations:Debug"
@@ -66,8 +65,8 @@ project "Prophecy"
 		defines "PR_DIST"
 		optimize "On"
 
-project "Sandbox"
-	location "Sandbox"
+project "Client"
+	location "Client"
 	kind "ConsoleApp"
 	language "C++"
 
@@ -98,7 +97,7 @@ project "Sandbox"
 
 		defines
 		{
-			"PR_PLATFORM_WINDOWS"
+
 		}
 
 	filter "configurations:Debug"
