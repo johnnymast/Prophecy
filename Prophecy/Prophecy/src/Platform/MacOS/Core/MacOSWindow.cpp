@@ -5,21 +5,21 @@
 namespace Prophecy {
     static uint8_t s_GLFWWindowCount = 0;
 
-    LinuxWindow::LinuxWindow(const WindowProps& props)
+    MacOSWindow::MacOSWindow(const WindowProps& props)
     {
     //    HZ_PROFILE_FUNCTION();
 
         Init(props);
     }
 
-    LinuxWindow::~LinuxWindow()
+    MacOSWindow::~MacOSWindow()
     {
      //   HZ_PROFILE_FUNCTION();
 
         Shutdown();
     }
 
-    void LinuxWindow::Init(const WindowProps& props)
+    void MacOSWindow::Init(const WindowProps& props)
     {
         //HZ_PROFILE_FUNCTION();
 
@@ -145,7 +145,7 @@ namespace Prophecy {
     }
 
 
-    void LinuxWindow::Shutdown()
+    void MacOSWindow::Shutdown()
     {
 //        HZ_PROFILE_FUNCTION();
 
@@ -159,7 +159,7 @@ namespace Prophecy {
     }
 
 
-    void LinuxWindow::OnUpdate()
+    void MacOSWindow::OnUpdate()
     {
 //        HZ_PROFILE_FUNCTION();
 
@@ -167,7 +167,7 @@ namespace Prophecy {
 //        m_Context->SwapBuffers();
     }
 
-    void LinuxWindow::SetVSync(bool enabled)
+    void MacOSWindow::SetVSync(bool enabled)
     {
 //        HZ_PROFILE_FUNCTION();
 
@@ -179,7 +179,7 @@ namespace Prophecy {
         m_Data.VSync = enabled;
     }
 
-    bool LinuxWindow::IsVSync() const
+    bool MacOSWindow::IsVSync() const
     {
         return m_Data.VSync;
     }

@@ -5,6 +5,8 @@
 #include "Platform/Windows/Core/WindowsWindow.h"
 #elif defined(__linux__)
 #include "Platform/Linux/Core/LinuxWindow.h"
+#elif defined(__APPLE__)
+#include "Platform/MacOS/Core/MacOSWindow.h"
 #endif
 
 namespace Prophecy {
@@ -14,6 +16,8 @@ namespace Prophecy {
         return CreateScope<WindowsWindow>(props);
 #elif defined(__linux__)
         return CreateScope<LinuxWindow>(props);
+#elif defined(__APPLE__)
+        return CreateScope<MacOSWindow>(props);
 #else
         return nullptr;
 #endif
