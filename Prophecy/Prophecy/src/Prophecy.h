@@ -6,10 +6,3 @@
 #include "Prophecy/Core/Application.h"
 #include "Prophecy/Core/Window.h"
 #include "Prophecy/Core/Log.h"
-
-
-
-
-// ----------------- Entry Point -----------
-//#include "Prophecy/Core/EntryPoint.h"
-// -----------------------------------------

@@ -1,5 +1,6 @@
 workspace "Prophecy"
 	architecture "x64"
+    startproject "Hazelnut"
 
 	configurations
 	{
@@ -14,6 +15,8 @@ workspace "Prophecy"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+
 
 project "Prophecy"
 	location "Prophecy"
@@ -30,24 +33,32 @@ project "Prophecy"
 
 	files
 	{
-		"%{prj.name}/Prophecy/src/**.h",
-		"%{prj.name}/Prophecy/src/**.cpp"
+		"%{prj.name}/Prophecy/**.h",
+		"%{prj.name}/Prophecy/**.cpp"
 	}
 
 	includedirs
 	{
 	    "%{prj.name}/Prophecy/src",
-		"%{prj.name}/Prophecy/vendor/spdlog/include"
+		"%{prj.name}/Prophecy/vendor/spdlog/include",
 		"%{prj.name}/Prophecy/vendor/glfw/include"
 	}
+
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS",
+		"GLFW_INCLUDE_NONE"
+	}
+
+
+	links
+    {
+        "glfw"
+    }
 
 	filter "system:windows"
 		systemversion "latest"
 
-		defines
-		{
-
-		}
 
 		postbuildcommands
 		{
@@ -83,7 +94,6 @@ project "Client"
 	includedirs
 	{
 		"Prophecy/Prophecy/vendor/spdlog/include",
-		"Prophecy/Prophecy/vendor/glfw/include",
 		"Prophecy/Prophecy/src"
 	}
 
