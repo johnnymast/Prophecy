@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 
 
-class Vector3DTest : public ::testing::Test {
+class LayerStackTest : public ::testing::Test {
     void SetUp( ) {
         std::cout << "SetUp" << std::endl;
     }
@@ -11,10 +11,10 @@ class Vector3DTest : public ::testing::Test {
     }
 };
 
-TEST_F (Vector3DTest, UnitTest1) {
+TEST_F (LayerStackTest, UnitTest1) {
     EXPECT_EQ(1,1);
 }
 
-TEST_F (Vector3DTest, UnitTest2) {
+TEST_F (LayerStackTest, UnitTest2) {
     EXPECT_EQ(1,1);
 }

@@ -14,6 +14,8 @@ file(GLOB PROPHECY_SRC
         "Prophecy/src/Prophecy/Core/Base.h"
         "Prophecy/src/Prophecy/Core/Layer.h"
         "Prophecy/src/Prophecy/Core/Layer.cpp"
+        "Prophecy/src/Prophecy/Core/LayerStack.h"
+        "Prophecy/src/Prophecy/Core/LayerStack.cpp"
         "Prophecy/src/Platform/Linux/Core/MacOSWindow.h"
         "Prophecy/src/Platform/Linux/Core/LinuxWindow.cpp"
         "Prophecy/src/Platform/Windows/Core/WindowsWindow.h"
