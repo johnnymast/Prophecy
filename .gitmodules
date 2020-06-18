@@ -6,3 +6,6 @@
 	path = Prophecy/Prophecy/vendor/spdlog
 	url = https://github.com/gabime/spdlog
 	branch = master
+[submodule "Prophecy_tests/vendor/gtest"]
+	path = Prophecy_tests/vendor/gtest
+	url = https://github.com/google/googletest

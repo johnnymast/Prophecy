@@ -14,5 +14,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 include_directories(Prophecy/Prophecy/src)
 
 add_subdirectory(Prophecy)
+add_subdirectory(Prophecy_tests)
 add_subdirectory(Client)
 
