@@ -38,6 +38,7 @@ project "Prophecy"
 	{
 	    "%{prj.name}/Prophecy/src",
 		"%{prj.name}/Prophecy/vendor/spdlog/include"
+		"%{prj.name}/Prophecy/vendor/glfw/include"
 	}
 
 	filter "system:windows"
