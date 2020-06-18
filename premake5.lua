@@ -26,7 +26,7 @@ project "Prophecy"
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	pchheader "compile.h"
-	pchsource "Prophecy/src/compile.cpp"
+	pchsource "Prophecy/Prophecy/src/compile.cpp"
 
 	files
 	{
