@@ -12,6 +12,10 @@ file(GLOB PROPHECY_SRC
         "Prophecy/src/Prophecy/Core/Log.cpp"
         "Prophecy/src/Prophecy/Core/EntryPoint.h"
         "Prophecy/src/Prophecy/Core/Base.h"
+        "Prophecy/src/Platform/Linux/LinuxWindow.h"
+        "Prophecy/src/Platform/Linux/LinuxWindow.cpp"
+        "Prophecy/src/Platform/Windows/WindowsWindow.h"
+        "Prophecy/src/Platform/Windows/WindowsWindow.cpp"
         )
 
 
