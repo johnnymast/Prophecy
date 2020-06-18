@@ -2,9 +2,9 @@
 #include "Prophecy/Core/Window.h"
 
 #if defined(_WINDOWS) || defined(_WIN32) || defined(_WIN64)
-#include "Platform/Windows/WindowsWindow.h"
+#include "Platform/Windows/Core/WindowsWindow.h"
 #elif defined(__linux__)
-#include "Platform/Linux/LinuxWindow.h"
+#include "Platform/Linux/Core/LinuxWindow.h"
 #endif
 
 namespace Prophecy {
@@ -14,9 +14,6 @@ namespace Prophecy {
         return CreateScope<WindowsWindow>(props);
 #elif defined(__linux__)
         return CreateScope<LinuxWindow>(props);
-//#error "Platfom is not supported"
-//        HZ_CORE_ASSERT(false, "Unknown platform!");
-
 #else
         return nullptr;
 #endif

@@ -1,5 +1,5 @@
 #include <compiled.h>
-#include "Platform/Windows/WindowsWindow.h"
+#include "WindowsWindow.h"
 #include <GLFW/glfw3.h>
 
 namespace Prophecy {

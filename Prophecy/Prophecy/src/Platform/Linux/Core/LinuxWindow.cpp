@@ -1,5 +1,5 @@
 #include <compiled.h>
-#include "Platform/Linux/LinuxWindow.h"
+#include "LinuxWindow.h"
 #include <GLFW/glfw3.h>
 
 namespace Prophecy {

@@ -12,15 +12,15 @@ file(GLOB PROPHECY_SRC
         "Prophecy/src/Prophecy/Core/Log.cpp"
         "Prophecy/src/Prophecy/Core/EntryPoint.h"
         "Prophecy/src/Prophecy/Core/Base.h"
-        "Prophecy/src/Platform/Linux/LinuxWindow.h"
-        "Prophecy/src/Platform/Linux/LinuxWindow.cpp"
-        "Prophecy/src/Platform/Windows/WindowsWindow.h"
-        "Prophecy/src/Platform/Windows/WindowsWindow.cpp"
+        "Prophecy/src/Platform/Linux/Core/LinuxWindow.h"
+        "Prophecy/src/Platform/Linux/Core/LinuxWindow.cpp"
+        "Prophecy/src/Platform/Windows/Core/WindowsWindow.h"
+        "Prophecy/src/Platform/Windows/Core/WindowsWindow.cpp"
         )
 
 
 
-add_library(${PROJECT_NAME} ${PROPHECY_SRC} Prophecy/src/Platform/Windows/WindowsWindow.cpp Prophecy/src/Platform/Windows/WindowsWindow.h Prophecy/src/Prophecy/Core/Window.cpp Prophecy/src/Prophecy/Core/Window.h)
+add_library(${PROJECT_NAME} ${PROPHECY_SRC} Prophecy/src/Platform/Windows/Core/WindowsWindow.cpp Prophecy/src/Platform/Windows/Core/WindowsWindow.h Prophecy/src/Prophecy/Core/Window.cpp Prophecy/src/Prophecy/Core/Window.h)
 
 
 target_precompile_headers(Prophecy
