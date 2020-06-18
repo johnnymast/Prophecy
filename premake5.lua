@@ -30,14 +30,14 @@ project "Prophecy"
 
 	files
 	{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/Prophecy/src/**.h",
+		"%{prj.name}/Prophecy/src/**.cpp"
 	}
 
 	includedirs
 	{
-	    "%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+	    "%{prj.name}/Prophecy/src",
+		"%{prj.name}/Prophecy/vendor/spdlog/include"
 	}
 
 	filter "system:windows"
@@ -81,8 +81,9 @@ project "Client"
 
 	includedirs
 	{
-		"Prophecy/vendor/spdlog/include",
-		"Prophecy/src"
+		"Prophecy/Prophecy/vendor/spdlog/include",
+		"Prophecy/Prophecy/vendor/glfw/include",
+		"Prophecy/Prophecy/src"
 	}
 
 	links
