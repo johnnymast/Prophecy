@@ -3,8 +3,6 @@
 #include <Prophecy.h>
 #include <Prophecy/Core/EntryPoint.h>
 
-extern Prophecy::Application;
-
 class Sandbox : public Prophecy::Application {
 public:
     Sandbox() {

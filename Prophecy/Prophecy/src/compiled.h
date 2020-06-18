@@ -1,8 +1,15 @@
-//
-// Created by jmast on 17-6-2020.
-//
+#pragma once
 
-#ifndef PROPHECYENGINE_COMPILED_H
-#define PROPHECYENGINE_COMPILED_H
+#include <iostream>
+#include <memory>
+#include <utility>
+#include <algorithm>
+#include <functional>
 
-#endif //PROPHECYENGINE_COMPILED_H
+#include <string>
+#include <sstream>
+#include <array>
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
+#include <cstddef>
