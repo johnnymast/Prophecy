@@ -8,11 +8,16 @@ vendor/bin/
 bin-int/
 bin/
 
+# Cmake
+CMakeFiles/
+cmake-build-debug/
+
 # Vendor coude
 
 Prophecy/vendor/
 
 # clion files
+.idea/
 .idea/Sandbox
 
 # Log files
