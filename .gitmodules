@@ -1,6 +1,8 @@
-[submodule "Prophecy/Prophecy/vendor/glfw"]
+[submodule "Prophecy/vendor/glfw"]
 	path = Prophecy/Prophecy/vendor/glfw
 	url = https://github.com/glfw/glfw
-[submodule "Prophecy/Prophecy/vendor/spdlog"]
+	branch = v1.x
+[submodule "Prophecy/vendor/spdlog"]
 	path = Prophecy/Prophecy/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+	branch = master
