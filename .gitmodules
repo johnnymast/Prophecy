@@ -1,0 +1,6 @@
+[submodule "Prophecy/vendor/spdlog"]
+	path = Prophecy/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "Prophecy/vendor/glfw"]
+	path = Prophecy/vendor/glfw
+	url = https://github.com/TheCherno/glfw

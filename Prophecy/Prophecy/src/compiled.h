@@ -1,0 +1,8 @@
+//
+// Created by jmast on 17-6-2020.
+//
+
+#ifndef PROPHECYENGINE_COMPILED_H
+#define PROPHECYENGINE_COMPILED_H
+
+#endif //PROPHECYENGINE_COMPILED_H
