@@ -1,5 +1,5 @@
 [submodule "Prophecy/vendor/glfw"]
-	path = Prophecy/Prophecy/vendor/glfw
+	path = Prophecy/vendor/glfw
 	url = https://github.com/glfw/glfw
 	branch = v1.x
 [submodule "Prophecy/vendor/spdlog"]
