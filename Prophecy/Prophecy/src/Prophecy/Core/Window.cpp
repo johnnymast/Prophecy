@@ -2,11 +2,11 @@
 #include "Prophecy/Core/Window.h"
 
 #if defined(_WINDOWS) || defined(_WIN32) || defined(_WIN64)
-#include "Platform/Windows/Core/WindowsWindow.h"
+    #include "Platform/Windows/Core/WindowsWindow.h"
 #elif defined(__linux__)
-#include "Platform/Linux/Core/MacOSWindow.h"
+    #include "Platform/Linux/Core/MacOSWindow.h"
 #elif defined(__APPLE__)
-#include "Platform/MacOS/Core/MacOSWindow.h"
+    #include "Platform/MacOS/Core/MacOSWindow.h"
 #endif
 
 namespace Prophecy {
