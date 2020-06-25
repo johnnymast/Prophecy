@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <prophecy.h>
+#include <Prophecy.h>
 
 class Vector2dTest : public ::testing::Test {
 

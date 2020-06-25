@@ -1,4 +1,5 @@
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
+include_directories(../Prophecy/Prophecy/src)
 
 add_executable(Prophecy_tests
         Core/LayerStack.cpp

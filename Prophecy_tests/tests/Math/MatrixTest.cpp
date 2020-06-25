@@ -1,50 +1,80 @@
 #include <gtest/gtest.h>
-#include <prophecy.h>
+#include <Prophecy.h>
 
-class MatrixTest : public ::testing::Test {
+///
 
-public:
-    void SetUp() {
-        emptyMatrix = Prophecy::Matrix();
-        testMatrix = Prophecy::Matrix(4, 4, 1);
-    }
+TEST (MatrixTest, stack_cloned_matrices_should_be_an_new_instance_not_equal_but_same_values) {
 
-
-protected:
-    Prophecy::Matrix emptyMatrix;
-    Prophecy::Matrix testMatrix;
-};
-
-TEST_F (MatrixTest, default_values_are_numeric_null) {
-    EXPECT_EQ(emptyMatrix.cols, 0);
-    EXPECT_EQ(emptyMatrix.rows, 0);
-    EXPECT_EQ(emptyMatrix.fill, 0);
+//
+//    Prophecy::Matrix<int> original(2, 3, 4);
+//    Prophecy::Matrix clone = original.clone();
+//
+//    EXPECT_EQ(original.m_rows, clone.m_rows);
+//    EXPECT_EQ(original.m_cols, clone.m_cols);
+//    //EXPECT_EQ(original.fill, clone.fill);
+//
+//    clone.m_rows = 5;
+//    clone.m_cols = 6;
+//
+//    EXPECT_EQ(original.m_rows, 2);
+//    EXPECT_EQ(original.m_cols, 3);
+//
+//    EXPECT_EQ(clone.m_rows, 5);
+//    EXPECT_EQ(clone.m_cols, 6);
 }
 
-TEST_F (MatrixTest, constructed_with_values_should_equal_constructed_values) {
-     int fill = 4;
-    const int rows = 2;
-    const int cols = 3;
-    int variants = 0;
+TEST (MatrixTest, default_values_are_numeric_0) {
+    Prophecy::Matrix <int> emptyMatrix(4, 2);
 
-    EXPECT_EQ(testMatrix.rows, 2);
-    EXPECT_EQ(testMatrix.cols, 3);
-    EXPECT_EQ(testMatrix.fill, 4);
-
-    int **data = testMatrix.data;
-
-   // fill = 3;
-    for (int _r = 0; _r < testMatrix.rows; _r++) {
-        for (int _c = 0; _c < testMatrix.cols; _c++) {
-            std::cout << data[_r][_c] << " ";
-            if (testMatrix.fill != fill) {
-                variants++;
-            }
-        }
-        std::cout << std::endl;
-    }
-
-    EXPECT_EQ(variants, 0);
-
+    EXPECT_EQ(emptyMatrix.m_cols, 0);
+    EXPECT_EQ(emptyMatrix.m_rows, 0);
+    EXPECT_EQ(emptyMatrix.m_fill, 0);
 }
+
+//TEST_F (MatrixTest, constructed_with_values_should_equal_constructed_values) {
+////    int fill = 4;
+////    const int rows = 2;
+////    const int cols = 3;
+////
+////    EXPECT_EQ(testMatrix.rows, 4);
+////    EXPECT_EQ(testMatrix.cols, 4);
+////    EXPECT_EQ(testMatrix.fill, 1);
+////
+////    int **data = testMatrix.valueOf();
+////
+////    EXPECT_TRUE(isCorrectlyFilled(data, fill));
+//}
+
+//
+//TEST_F(MatrixTest, valueat_should_return_the_correct_values) {
+////    Prophecy::Matrix m = Prophecy::Matrix(2, 2, 3);
+////    int row = 1, col = 2, val = 2;
+////
+////    m.setValue(row, col, val);
+////
+////    int expected = val;
+////    int result = m.valueAt(row, col);
+////
+////
+////    EXPECT_EQ(expected, result);
+////    EXPECT_TRUE(false);
+//}
+
+//TEST_F(MatrixTest, setvalue_should_return_the_correct_values) {
+////let m = new Prophecy.Math.Matrix(2, 2)
+////let row = 1
+////let col = 2
+////let val = 2
+////
+////m.setValue(row, col, val)
+////
+////let expected = 2
+////let result = m.valueAt(row, col)
+////
+////expect(result).toEqual(expected)
+//}
+
+//TEST_F(MatrixTest, setvalue_should_mark_matrix_dirty) {
+//
+//}
 
