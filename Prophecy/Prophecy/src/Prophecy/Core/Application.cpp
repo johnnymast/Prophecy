@@ -82,12 +82,13 @@ namespace Prophecy {
     }
 
     bool Application::OnWindowClose(WindowCloseEvent &e) {
-        std::cout << "OnWindowClose" << std::endl;
+        PROPHECY_CORE_INFO("OnWindowClose");
         m_Running = false;
         return true;
     }
 
     bool Application::OnWindowResize(WindowResizeEvent &e) {
+        PROPHECY_CORE_INFO("OnWindowResize");
         m_Running = false;
         return true;
     }

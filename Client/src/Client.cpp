@@ -8,7 +8,7 @@ class Sandbox : public Prophecy::Application {
 public:
     Sandbox() {
         PROPHECY_INFO("Client operational.");
-        SetAutostart(false);
+        //SetAutostart(false);
      //   Run();
      //   Start();
 
