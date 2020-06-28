@@ -1,8 +1,11 @@
 #pragma once
 
+#include <vector>
+#include <list>
+
 namespace Prophecy {
 
-    template<class T>
+    template<typename T=int>
     class Matrix {
     private:
         void createAndFill(int m_rows, int m_cols, T m_fill);
@@ -40,4 +43,6 @@ namespace Prophecy {
 
 
     };
+    extern Prophecy::Matrix<int>;
+
 }

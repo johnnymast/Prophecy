@@ -3,7 +3,7 @@
 namespace Prophecy {
 
 
-    template<class T>
+    template<typename T>
     Matrix<T>::Matrix(int rows, int cols) : m_rows(rows), m_cols(cols){
         std::cout << "COnstructed 2 args" << std::endl;
 
@@ -23,7 +23,7 @@ namespace Prophecy {
 //
 //    };
 
-    template<class T>
+    template<typename T>
     Matrix<T>::~Matrix() {
 //        delete[] m_data;
     }
@@ -35,12 +35,12 @@ namespace Prophecy {
 //        return m_data[row][col];
 //    }
 
-    template<class T>
+    template<typename T>
     Matrix<T> Matrix<T>::clone() {
         return Matrix(m_rows, m_cols, m_fill);
     }
 
-    template<class T>
+    template<typename T>
     void Matrix<T>::createAndFill(int rows, int cols, T fill) {
         if (m_size > 0) {
             m_data = new T *[rows];
@@ -63,7 +63,7 @@ namespace Prophecy {
         }
     }
 
-    template<class T>
+    template<typename T>
     void Matrix<T>::resize(int rows, int cols) {
 
         if (rows < 0 || cols < 0) {

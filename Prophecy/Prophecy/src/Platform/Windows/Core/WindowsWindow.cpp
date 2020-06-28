@@ -1,4 +1,5 @@
 #include <compiled.h>
+#include "Prophecy.h"
 #include "WindowsWindow.h"
 #include <GLFW/glfw3.h>
 
@@ -50,26 +51,28 @@ namespace Prophecy {
 //        m_Context = GraphicsContext::Create(m_Window);
 //        m_Context->Init();
 
-//        glfwSetWindowUserPointer(m_Window, &m_Data);
+        glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
 //
 //        // Set GLFW callbacks
-//        glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
-//        {
+        glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
+        {
+            std::cout << "Resize window." << std::endl;
 //            WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 //            data.Width = width;
 //            data.Height = height;
 //
 //            WindowResizeEvent event(width, height);
 //            data.EventCallback(event);
-//        });
+        });
 //
-//        glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
-//        {
-//            WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-//            WindowCloseEvent event;
-//            data.EventCallback(event);
-//        });
+        glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
+        {
+            std::cout << "Window closed" << std::endl;
+            WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+            WindowCloseEvent event;
+            data.EventCallback(event);
+        });
 //
 //        glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
 //        {
@@ -183,7 +186,6 @@ namespace Prophecy {
     {
         return m_Data.VSync;
     }
-
 
 
 }

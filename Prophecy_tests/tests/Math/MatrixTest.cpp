@@ -1,9 +1,37 @@
 #include <gtest/gtest.h>
 #include <Prophecy.h>
 
-///
+//using Matrix = Prophecy::Matrix<int>;
+//using Matrix = class Prophecy::Matrix<int>;
 
-TEST (MatrixTest, stack_cloned_matrices_should_be_an_new_instance_not_equal_but_same_values) {
+//template<> Prophecy::Matrix::createAndFill(int, int, int);
+
+//template void Prophecy::Matrix<int>::createAndFill(int, int, int);
+//void Prophecy::Matrix<int>::createAndFill(int,int,int);
+// void Prophecy::Matrix<int>::createAndFill(int,int,int);
+//extern Prophecy::Matrix<int>::Matrix(int,int);
+//extern
+extern template class Prophecy::Matrix<int>;
+
+class MatrixTest : public ::testing::Test {
+
+public:
+    void SetUp() {
+//        emptyMatrix();
+//        filledMatrix(2,2);
+
+//        vec2without = Prophecy::Vector2d();
+//        vec2with = Prophecy::Vector2d(1, 2);
+    }
+
+
+protected:
+    Prophecy::Matrix<int> emptyMatrix;
+//    extern Prophecy::Matrix<int> filledMatrix;
+
+};
+
+TEST_F (MatrixTest, stack_cloned_matrices_should_be_an_new_instance_not_equal_but_same_values) {
 
 //
 //    Prophecy::Matrix<int> original(2, 3, 4);
@@ -24,11 +52,11 @@ TEST (MatrixTest, stack_cloned_matrices_should_be_an_new_instance_not_equal_but_
 }
 
 TEST (MatrixTest, default_values_are_numeric_0) {
-    Prophecy::Matrix <int> emptyMatrix(4, 2);
-
-    EXPECT_EQ(emptyMatrix.m_cols, 0);
-    EXPECT_EQ(emptyMatrix.m_rows, 0);
-    EXPECT_EQ(emptyMatrix.m_fill, 0);
+//    Prophecy::Matrix<int> emptyMatrix(4, 2);
+//
+//    EXPECT_EQ(emptyMatrix.m_cols, 0);
+//    EXPECT_EQ(emptyMatrix.m_rows, 0);
+//    EXPECT_EQ(emptyMatrix.m_fill, 0);
 }
 
 //TEST_F (MatrixTest, constructed_with_values_should_equal_constructed_values) {

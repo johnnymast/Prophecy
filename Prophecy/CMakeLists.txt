@@ -33,7 +33,7 @@ file(GLOB PROPHECY_SRC
 
 
 
-add_library(${PROJECT_NAME} ${PROPHECY_SRC} Prophecy/src/Platform/Windows/Core/WindowsWindow.cpp Prophecy/src/Platform/Windows/Core/WindowsWindow.h Prophecy/src/Prophecy/Core/Window.cpp Prophecy/src/Prophecy/Core/Window.h)
+add_library(${PROJECT_NAME} ${PROPHECY_SRC} Prophecy/src/Platform/Windows/Core/WindowsWindow.cpp Prophecy/src/Platform/Windows/Core/WindowsWindow.h Prophecy/src/Prophecy/Core/Window.cpp Prophecy/src/Prophecy/Core/Window.h Prophecy/src/Prophecy/Event/Event.h)
 
 
 target_precompile_headers(Prophecy

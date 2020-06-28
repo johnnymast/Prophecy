@@ -1,7 +1,6 @@
 #pragma once
 #include "compiled.h"
-
-#include "Prophecy/Core/Base.h"
+#include "Prophecy/Event/Event.h"
 
 namespace Prophecy {
 
@@ -21,7 +20,7 @@ namespace Prophecy {
 
     class Window {
     public:
-//        using EventCallbackFn = std::function<void(Event & )>;
+        using EventCallbackFn = std::function<void(Event & )>;
 
         virtual ~Window() = default;
 
@@ -32,7 +31,7 @@ namespace Prophecy {
         virtual uint32_t GetHeight() const = 0;
 
         // Window attributes
-  //      virtual void SetEventCallback(const EventCallbackFn &callback) = 0;
+        virtual void SetEventCallback(const EventCallbackFn &callback) = 0;
 
         virtual void SetVSync(bool enabled) = 0;
 

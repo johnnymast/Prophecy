@@ -10,6 +10,8 @@
 #include "Prophecy/Core/LayerStack.h"
 #include "Prophecy/Core/Layer.h"
 
+#include "Prophecy/Event/Event.h"
+
 #include "Prophecy/Math/Vector3d.h"
 #include "Prophecy/Math/Vector2d.h"
 #include "Prophecy/Math/Matrix.h"
