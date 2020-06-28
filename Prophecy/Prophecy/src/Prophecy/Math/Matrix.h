@@ -43,6 +43,6 @@ namespace Prophecy {
 
 
     };
-    extern Prophecy::Matrix<int>;
+    //extern Prophecy::Matrix<int>;
 
 }
