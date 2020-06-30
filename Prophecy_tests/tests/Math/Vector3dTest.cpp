@@ -75,7 +75,11 @@ TEST_F (Vector3dTest, add_should_work_with_int_parameter) {
 }
 
 TEST_F (Vector3dTest, add_should_return_it_self) {
-    EXPECT_TRUE(false);
+    Prophecy::Vector3d ret =  vec3with.add(5);
+
+    ASSERT_EQ(vec3with.x, ret.x);
+    ASSERT_EQ(vec3with.y, ret.y);
+    ASSERT_EQ(vec3with.z, ret.z);
 }
 
 
@@ -104,7 +108,11 @@ TEST_F (Vector3dTest, subtract_should_work_with_int_parameter) {
 }
 
 TEST_F (Vector3dTest, subtract_should_return_it_self) {
-    EXPECT_TRUE(false);
+    Prophecy::Vector3d ret =  vec3with.subtract(5);
+
+    ASSERT_EQ(vec3with.x, ret.x);
+    ASSERT_EQ(vec3with.y, ret.y);
+    ASSERT_EQ(vec3with.z, ret.z);
 }
 
 
@@ -133,9 +141,11 @@ TEST_F (Vector3dTest, multiply_should_work_with_int_parameter) {
 }
 
 TEST_F (Vector3dTest, multiply_should_return_it_self) {
+    Prophecy::Vector3d ret =  vec3with.multiply(5);
 
-//    Vector3d ret =  vec3with.add(5);
-    EXPECT_TRUE(false);
+    ASSERT_EQ(vec3with.x, ret.x);
+    ASSERT_EQ(vec3with.y, ret.y);
+    ASSERT_EQ(vec3with.z, ret.z);
 }
 
 TEST_F (Vector3dTest, divide_should_work_with_vector3d_parameter) {

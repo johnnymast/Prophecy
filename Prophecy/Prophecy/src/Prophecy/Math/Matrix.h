@@ -5,44 +5,41 @@
 
 namespace Prophecy {
 
-    template<typename T=int>
+    template<class T>
     class Matrix {
     private:
-        void createAndFill(int m_rows, int m_cols, T m_fill);
-
-        T **m_data;
+        T **m_Data;
 
     protected:
-        bool dirty = false;
+        bool m_Dirty = false;
 
     public:
-        int m_rows = 0;
-        int m_cols = 0;
-        T m_fill = 0;
-        int m_size = 0;
+        unsigned int m_Rows = 0;
+        unsigned int m_Cols = 0;
+        unsigned int m_Fill = 0;
+        unsigned int m_Size = 0;
 
-        Matrix(int rows = 0, int cols = 0);
-
-//        Matrix(int rows = 0, int cols = 0, T fill = 0);
-
+        Matrix();
+        Matrix(unsigned int rows, unsigned int cols, unsigned int fill = 0);
         virtual ~Matrix();
-
         Matrix clone();
+        bool isDirty() { return m_Dirty; };
+        Matrix setValue(unsigned int row, unsigned int col, T value);
+        T valueAt(unsigned int row, unsigned int col);
 
-        // int **valueOf();
-
-        // Matrix<T> setValue(int row, int col, int value);
-
-        // int valueAt(int row, int col);
-
-
-        void resize(int rows, int cols);
-
-
-//        T &operator()(int rows, int cols);
-
-
+        Matrix add(T m);
+        Matrix add(Matrix<T> m);
+        Matrix subtract(T m);
+        Matrix subtract(Matrix<T> m);
+        Matrix multiply(T m);
+        Matrix multiply(Matrix<T> m);
     };
-    //extern Prophecy::Matrix<int>;
 
-}
+
+
+//    template class Prophecy::Matrix<int>;
+//    template class Prophecy::Matrix<float>;
+//    template class Prophecy::Matrix<double>;
+
+};
+

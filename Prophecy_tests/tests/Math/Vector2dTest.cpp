@@ -63,7 +63,10 @@ TEST_F (Vector2dTest, add_should_work_with_int_parameter) {
 }
 
 TEST_F (Vector2dTest, add_should_return_it_self) {
-    EXPECT_TRUE(false);
+    Prophecy::Vector2d ret =  vec2with.add(5);
+
+    ASSERT_EQ(vec2with.x, ret.x);
+    ASSERT_EQ(vec2with.y, ret.y);
 }
 
 
@@ -88,7 +91,10 @@ TEST_F (Vector2dTest, subtract_should_work_with_int_parameter) {
 }
 
 TEST_F (Vector2dTest, subtract_should_return_it_self) {
-    EXPECT_TRUE(false);
+    Prophecy::Vector2d ret =  vec2with.subtract(5);
+
+    ASSERT_EQ(vec2with.x, ret.x);
+    ASSERT_EQ(vec2with.y, ret.y);
 }
 
 
@@ -113,7 +119,10 @@ TEST_F (Vector2dTest, multiply_should_work_with_int_parameter) {
 }
 
 TEST_F (Vector2dTest, multiply_should_return_it_self) {
-    EXPECT_TRUE(false);
+    Prophecy::Vector2d ret =  vec2with.multiply(5);
+
+    ASSERT_EQ(vec2with.x, ret.x);
+    ASSERT_EQ(vec2with.y, ret.y);
 }
 
 TEST_F (Vector2dTest, divide_should_work_with_vector2d_parameter) {

@@ -12,10 +12,8 @@ namespace Prophecy {
 
         Vector3d clone();
 
-
         template<typename T>
         Vector3d add(T n);
-
 
         template<typename T>
         Vector3d subtract(T n);
